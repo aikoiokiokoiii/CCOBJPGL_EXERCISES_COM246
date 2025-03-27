@@ -35,15 +35,16 @@ import java.util.Scanner;
                     String password_from_file = filedata.split(",")[1];
 
                     if(username_from_input.equals(username_from_file) && password_from_input.equals(password_from_file)){
-                    System.out.println("Login Sucessfully, Hello " + me.getUsername());
+                    System.out.println("Login Sucessfully, \nHello " + me.getUsername());
                     break;
                 }else{
                     System.out.println("Login Failed");
                 }
-                    
-                fileScanner.close();
 
                 }
+
+                loginScanner.close();
+                fileScanner.close();
             }
 
         }
