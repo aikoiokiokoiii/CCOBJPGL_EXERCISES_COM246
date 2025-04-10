@@ -1,0 +1,23 @@
+public class HybridVehicle implements InternalCombustion, Electric {
+    private Hybrid hybrid;
+
+    public HybridVehicle(Hybrid hybrid) {
+        this.hybrid = hybrid;
+    }
+
+    @Override
+    public String getFillgas(){
+        return this.hybrid.getFillgas();
+    }
+
+    @Override
+    public String getBattery(){
+        return this.hybrid.getBattery();
+    }
+
+    @Override
+    public void displayVehicleDetails(){
+        System.out.println("My car has" + getFillgas() + "and" + getBattery());
+    }
+
+}
